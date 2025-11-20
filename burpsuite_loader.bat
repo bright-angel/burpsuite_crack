@@ -1,0 +1,5 @@
+@pushd %~dp0
+@call openjdk
+@start java -XX:MaxRAMPercentage=50 -XX:+IgnoreUnrecognizedVMOptions -javaagent:burpsuitloader.jar=loader,hanizfy --add-opens=java.desktop/javax.swing=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED --add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED --add-opens=java.base/jdk.internal.org.objectweb.asm.Opcodes=ALL-UNNAMED -jar ..\..\burpsuite\current\burpsuite_pro.jar
+@popd
+
